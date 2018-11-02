@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The Box Model</title>
+    <link rel="stylesheet" href="./box_model.css" />
+  </head>
+  <body>
+    <div id="first-div"></div>
+
+    <div id="second-div">
+      <p>testingir dimensions.
+Let's update our CSS so that all divs have a fixed height and width of 200px. Refresh the page and note their new dimensions in the inspector.
+All boxes in HTML have padding and border properties available to them. Let's give both boxes a padding of 50px and a border of 5px solid black.
+Note the current height and width of each box now. The padding and border has been added on top of the original width we defined, so we should now have a total width and total height of 310px.
+What if we don't want the padding and border to be added on top of the width, but rather be included in the total width calculation? We can accomplish this by setting the box-sizing property to border-box. Do this for the second box and note the results. Note how the content box has shrunken to allow room for the padding and border. NB: The default value for the box-sizing property is content-box.
+Do box elements always need a set height and width to be visible? No! Play around with adding text into the p element and see how it expands and shrinks to accomodate its contents.
+For the children</p>
+    </div>
+    
+    <div class="image-1-container">
+      <img src="./assets/cat.jpg" alt="cat picture"/>
+    </div>
+    
+    <div class="image-2-container">
+      <img src="./assets/cat.jpg" alt="cat picture"/>
+    </div>
+
+    
+  </body>
+</html>
+
