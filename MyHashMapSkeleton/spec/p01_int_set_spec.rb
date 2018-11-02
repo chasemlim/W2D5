@@ -1,5 +1,6 @@
 require 'rspec'
 require 'p01_int_set'
+require 'byebug'
 
 describe MaxIntSet do
   let(:set) { MaxIntSet.new(50) }
