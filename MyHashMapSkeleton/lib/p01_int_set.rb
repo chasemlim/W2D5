@@ -79,19 +79,18 @@ class ResizingIntSet
   end
 
   def remove(num)
-    location = num % num_buckets
     remove_num(num) if include?(num)
   end
 
   def include?(num)
-    location = num % num_buckets
-    @store[location].include?(num)
+    self[num].include?(num)
   end
 
   private
 
   def [](num)
-    # optional but useful; return the bucket corresponding to `num`
+    location = num % num_buckets
+    @store[location]
   end
   
   def num_buckets
@@ -99,14 +98,13 @@ class ResizingIntSet
   end
 
   def insert_num(num)
-    location = num % num_buckets
-    @store[location] << num 
+
+    self[num] << num 
     @count += 1
   end
   
   def remove_num(num)
-    location = num % num_buckets
-    @store[location].delete(num)
+    self[num].delete(num)
     @count -= 1
   end
   
